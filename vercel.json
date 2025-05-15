@@ -1,0 +1,14 @@
+{
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "installCommand": null,
+  "devCommand": null,
+  "cleanUrls": true,
+  "functions": {
+    "*.php": {
+      "runtime": "vercel-php@0.6.0"
+    }
+  },
+  "routes": [{ "src": "/(.*)\\.php", "dest": "/$1.php" }, { "src": "/(.*)", "dest": "/index.php" }]
+}
