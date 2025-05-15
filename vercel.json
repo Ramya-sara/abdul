@@ -4,11 +4,13 @@
   "outputDirectory": ".",
   "installCommand": null,
   "devCommand": null,
-  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/(.*)\\.php", "destination": "/$1.php" },
+    { "source": "/(.*)", "destination": "/index.php" }
+  ],
   "functions": {
     "*.php": {
       "runtime": "vercel-php@0.6.0"
     }
-  },
-  "routes": [{ "src": "/(.*)\\.php", "dest": "/$1.php" }, { "src": "/(.*)", "dest": "/index.php" }]
+  }
 }
